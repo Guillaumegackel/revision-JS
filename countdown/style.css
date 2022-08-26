@@ -1,0 +1,41 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	font-family: "Poppins";
+	margin: 0;
+	align-items: center;
+	background-image: url(snow.jpg);
+	min-height: 100vh;
+	background-size: cover;
+	background-position: bottom bottom;
+}
+
+h1{
+	font-size: 4rem;
+	margin-top: -10rem;
+	font-weight: normal;
+	margin-top: 5rem;
+}
+
+.container{
+	display: flex;
+}
+
+.big-text{
+	font-size: 6rem;
+	line-height: 1;
+	margin:0 2rem;
+	font-weight: bold;
+}
+
+.countdown {
+	text-align: center;
+}
+.countdown span{
+	font-size: 1.5rem;
+}
+
