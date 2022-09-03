@@ -58,4 +58,20 @@ button {
 	cursor: pointer;
 }
 
+.result{
+	width: 100%;
+text-align: center;
+margin: 20px;
+	padding: 40px;
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.result button{
+width: 300px;
+margin: auto;
+}
+
+
+
 

@@ -75,15 +75,25 @@ submitBtn.addEventListener("click", () => {
 	
 	if (answer) {
 		if(answer===quizData[currentQuestion].correct){
-			score++
+			score++;
 		}
 	  currentQuestion++;
-    if (currentQuestion < quizData.length) {
+
+        if (currentQuestion < quizData.length) {
       loadQuiz();
-    } else if (`${score}>="3"`){
-quiz.innerHTML= `<h2>Félicitation, vous connaissez très bien Norah! Vous avez ${score}points / ${quizData.length}</h2><button onclick="location.reload()">Reload</button>`
+    } 
+
+ if (currentQuestion === 3 && score>2){
+  document.getElementById("quiz").classList.add('result');
+  quiz.innerHTML= ` Félicitation, vous connaissez très bien Norah! <br><br> Vous avez ${score} bonnes réponses  <br><br /><button onclick="location.reload()">Recommencez ?</button>`
 
 }
+
+if (currentQuestion === 3 && score<2){
+  document.getElementById("quiz").classList.add('result');
+  quiz.innerHTML= ` Dommage, vous ne connaissez pas très bien Norah! <br><br> Vous avez seulement ${score} bonnes réponses  <br><br /><button onclick="location.reload()">Essayez encore ?</button>`
+}
+
 }
 
 
